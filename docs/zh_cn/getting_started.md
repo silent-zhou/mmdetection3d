@@ -85,12 +85,30 @@ cd mmsegmentation
 git checkout v0.20.0  # switch to v0.20.0 branch
 pip install -e .  # or "python setup.py develop"
 ```
+**zh: 前三步骤按照cuda10.2、pytorch1.8+配置**
+```shell
+安装mmcv
+pip install mmcv-full==1.5.2 -f https://download.openmmlab.com/mmcv/dist/cu102/torch1.8/index.html
 
+```
 **步骤 3. 克隆 MMDetection3D 代码仓库.**
 
 ```shell
 git clone https://github.com/open-mmlab/mmdetection3d.git
 cd mmdetection3d
+
+安装mmdetection
+git clone https://github.com/open-mmlab/mmdetection.git
+cd mmdetection
+git checkout v2.24.0  # switch to v2.24.0 branch
+pip install -r requirements/build.txt
+pip install -v -e .  # or "python setup.py develop"
+
+安装mmsegmentation
+git clone https://github.com/open-mmlab/mmsegmentation.git
+cd mmsegmentation
+git checkout v0.25.0  # switch to v0.20.0 branch
+pip install -e .  # or "python setup.py develop"
 ```
 
 **步骤 4. 安装依赖包和 MMDetection3D.**
